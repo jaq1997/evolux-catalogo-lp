@@ -53,7 +53,7 @@ export function SiteHeader() {
             render={<a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" />}
             className="bg-brand font-semibold text-brand-foreground hover:bg-brand-dark"
           >
-            Falar no WhatsApp
+            Quero meu catálogo
           </Button>
         </div>
 
@@ -86,7 +86,7 @@ export function SiteHeader() {
               render={<a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" />}
               className="mt-2 bg-brand font-semibold text-brand-foreground hover:bg-brand-dark"
             >
-              Falar no WhatsApp
+              Quero meu catálogo
             </Button>
           </nav>
         </div>

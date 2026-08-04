@@ -15,6 +15,7 @@ type Segment = {
   store: string
   categories: string[]
   items: MockItem[]
+  mediaSrc?: string
 }
 
 const SEGMENTS: Segment[] = [
@@ -25,13 +26,10 @@ const SEGMENTS: Segment[] = [
     title: 'Pizzaria, hamburgueria, marmitaria, açaiteria',
     text: 'Cardápio com fotos, adicionais, variações de tamanho e pedido formatado direto no seu WhatsApp — sem pagar comissão por venda.',
     bullets: ['Adicionais e observações', 'Variações de tamanho', 'Pedido pronto no WhatsApp'],
-    store: 'Cantina da Praça',
+    store: 'Pizzaria & Delivery',
     categories: ['Pizzas', 'Lanches', 'Bebidas'],
-    items: [
-      { name: 'Pizza Grande', price: 'R$ 62,90', meta: 'Escolha 2 sabores' },
-      { name: 'Combo Burger + Fritas', price: 'R$ 39,90', meta: 'Adicionais disponíveis' },
-      { name: 'Açaí 500ml', price: 'R$ 22,00', meta: 'Monte o seu' },
-    ],
+    items: [],
+    mediaSrc: '/video-catalogo-alimentacao.mp4',
   },
   {
     value: 'servicos',
@@ -70,13 +68,10 @@ const SEGMENTS: Segment[] = [
     title: 'Loja de roupa, presentes, papelaria, pet shop',
     text: 'Catálogo de produtos com categorias e variações (tamanho, cor), cliente manda o pedido pronto pelo WhatsApp.',
     bullets: ['Categorias organizadas', 'Variações de tamanho e cor', 'Pedido pronto no WhatsApp'],
-    store: 'Loja Encanto',
-    categories: ['Roupas', 'Presentes', 'Pet'],
-    items: [
-      { name: 'Camiseta Estampada', price: 'R$ 79,90', meta: 'P, M, G, GG' },
-      { name: 'Kit Presente', price: 'R$ 129,00', meta: '3 opções de cor' },
-      { name: 'Ração Premium 3kg', price: 'R$ 84,90', meta: 'Cães adultos' },
-    ],
+    store: 'Loja de Roupas',
+    categories: ['Roupas', 'Presentes', 'Acessórios'],
+    items: [],
+    mediaSrc: '/loja-roupas.gif',
   },
 ]
 
@@ -128,7 +123,7 @@ export function Segments() {
                   </ul>
                 </div>
                 <div>
-                  <PhoneMockup storeName={seg.store} categories={seg.categories} items={seg.items} />
+                  <PhoneMockup mediaSrc={seg.mediaSrc} storeName={seg.store} categories={seg.categories} items={seg.items} />
                 </div>
               </div>
             </TabsContent>

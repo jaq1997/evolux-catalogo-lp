@@ -8,13 +8,34 @@ export type MockItem = {
 }
 
 type PhoneMockupProps = {
-  storeName: string
-  categories: string[]
-  items: MockItem[]
+  storeName?: string
+  categories?: string[]
+  items?: MockItem[]
+  mediaSrc?: string
+  alt?: string
   className?: string
 }
 
-export function PhoneMockup({ storeName, categories, items, className }: PhoneMockupProps) {
+export function PhoneMockup({ storeName, categories, items, mediaSrc, alt, className }: PhoneMockupProps) {
+  if (mediaSrc) {
+    return (
+      <div
+        className={cn(
+          'mx-auto w-full max-w-[300px] rounded-[2.25rem] border border-border bg-foreground p-2 shadow-2xl shadow-brand/20',
+          className,
+        )}
+      >
+        <div className="relative overflow-hidden rounded-[1.75rem] bg-background aspect-[9/18.5] flex items-center justify-center">
+          <img
+            src={mediaSrc}
+            alt={alt || storeName || 'Demonstração do Catálogo'}
+            className="h-full w-full object-cover rounded-[1.75rem]"
+          />
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div
       className={cn(
@@ -31,7 +52,7 @@ export function PhoneMockup({ storeName, categories, items, className }: PhoneMo
               <ShoppingBag className="h-5 w-5" aria-hidden="true" />
             </div>
             <div>
-              <p className="text-sm font-bold leading-tight">{storeName}</p>
+              <p className="text-sm font-bold leading-tight">{storeName || 'Sua Marca'}</p>
               <p className="text-[11px] text-brand-foreground/70">Aberto agora · Peça pelo WhatsApp</p>
             </div>
           </div>
@@ -46,41 +67,45 @@ export function PhoneMockup({ storeName, categories, items, className }: PhoneMo
         </div>
 
         {/* Categories */}
-        <div className="flex gap-2 overflow-hidden px-4 pt-3">
-          {categories.map((cat, i) => (
-            <span
-              key={cat}
-              className={cn(
-                'whitespace-nowrap rounded-full px-3 py-1 text-[11px] font-medium',
-                i === 0 ? 'bg-brand text-brand-foreground' : 'bg-secondary text-secondary-foreground',
-              )}
-            >
-              {cat}
-            </span>
-          ))}
-        </div>
+        {categories && (
+          <div className="flex gap-2 overflow-hidden px-4 pt-3">
+            {categories.map((cat, i) => (
+              <span
+                key={cat}
+                className={cn(
+                  'whitespace-nowrap rounded-full px-3 py-1 text-[11px] font-medium',
+                  i === 0 ? 'bg-brand text-brand-foreground' : 'bg-secondary text-secondary-foreground',
+                )}
+              >
+                {cat}
+              </span>
+            ))}
+          </div>
+        )}
 
         {/* Items */}
-        <div className="space-y-2 px-4 py-3">
-          {items.map((item) => (
-            <div
-              key={item.name}
-              className="flex items-center gap-3 rounded-xl border border-border bg-card p-2.5"
-            >
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-secondary text-[9px] font-medium text-muted-foreground">
-                mockup
+        {items && (
+          <div className="space-y-2 px-4 py-3">
+            {items.map((item) => (
+              <div
+                key={item.name}
+                className="flex items-center gap-3 rounded-xl border border-border bg-card p-2.5"
+              >
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-secondary text-[9px] font-medium text-muted-foreground">
+                  mockup
+                </div>
+                <div className="min-w-0 flex-1">
+                  <p className="truncate text-xs font-semibold text-card-foreground">{item.name}</p>
+                  {item.meta && <p className="text-[11px] text-muted-foreground">{item.meta}</p>}
+                  <p className="text-xs font-bold text-brand">{item.price}</p>
+                </div>
+                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-brand-soft text-brand">
+                  +
+                </span>
               </div>
-              <div className="min-w-0 flex-1">
-                <p className="truncate text-xs font-semibold text-card-foreground">{item.name}</p>
-                {item.meta && <p className="text-[11px] text-muted-foreground">{item.meta}</p>}
-                <p className="text-xs font-bold text-brand">{item.price}</p>
-              </div>
-              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-brand-soft text-brand">
-                +
-              </span>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
 
         {/* WhatsApp button */}
         <div className="px-4 pb-4">

@@ -1,16 +1,18 @@
 import { Camera, Mail, MessageCircle, ShoppingBag } from 'lucide-react'
 
+import { CHECKOUT_URL } from '@/lib/site'
+
 const QUICK_LINKS = [
   { label: 'Para quem é', href: '#para-quem-e' },
   { label: 'Comparativo', href: '#comparativo' },
-  { label: 'Planos', href: '#oferta' },
+  { label: 'Quero meu catálogo', href: CHECKOUT_URL },
   { label: 'FAQ', href: '#faq' },
 ]
 
 const SOCIALS = [
-  { label: 'Instagram', icon: Camera, href: '#' },
-  { label: 'WhatsApp', icon: MessageCircle, href: '#' },
-  { label: 'E-mail', icon: Mail, href: '#' },
+  { label: 'Instagram', icon: Camera, href: 'https://www.instagram.com/souevolux360/', target: '_blank' },
+  { label: 'WhatsApp', icon: MessageCircle, href: CHECKOUT_URL, target: '_blank' },
+  { label: 'E-mail', icon: Mail, href: 'mailto:contatoevolux360@gmail.com' },
 ]
 
 export function SiteFooter() {
@@ -59,6 +61,8 @@ export function SiteFooter() {
                     <a
                       key={s.label}
                       href={s.href}
+                      target={s.target}
+                      rel={s.target === '_blank' ? 'noopener noreferrer' : undefined}
                       aria-label={s.label}
                       className="flex h-10 w-10 items-center justify-center rounded-lg border border-border text-muted-foreground transition-colors hover:border-brand hover:text-brand"
                     >
@@ -73,7 +77,16 @@ export function SiteFooter() {
 
         <div className="mt-12 border-t border-border pt-6">
           <p className="text-xs text-muted-foreground">
-            Design e desenvolvimento humano, ponta a ponta — Evolux360.
+            Design e desenvolvimento humano, ponta a ponta —{' '}
+            <a
+              href="https://evolux360.online"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-foreground underline decoration-border underline-offset-2 transition-colors hover:text-brand"
+            >
+              Evolux360
+            </a>
+            .
           </p>
           <p className="mt-2 text-sm text-muted-foreground">
             © 2026 Evolux360. Todos os direitos reservados.

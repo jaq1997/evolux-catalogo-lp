@@ -4,8 +4,6 @@ import { Segments } from '@/components/landing/segments'
 import { Problem } from '@/components/landing/problem'
 import { Comparison } from '@/components/landing/comparison'
 import { HowItWorks } from '@/components/landing/how-it-works'
-import { Testimonials } from '@/components/landing/testimonials'
-import { Offer } from '@/components/landing/offer'
 import { Faq } from '@/components/landing/faq'
 import { SiteFooter } from '@/components/landing/site-footer'
 
@@ -18,9 +16,7 @@ export default function Page() {
         <Segments />
         <Problem />
         <Comparison />
-        <HowItWorks />
-        <Testimonials />
-        <Offer />
+        {/* <HowItWorks /> */}
         <Faq />
       </main>
       <SiteFooter />
