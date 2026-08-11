@@ -49,11 +49,10 @@ export function SiteHeader() {
         <div className="hidden md:block">
           <Button
             size="lg"
-            nativeButton={false}
-            render={<a href="#saber-mais" />}
+            render={<a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" />}
             className="bg-brand font-semibold text-brand-foreground hover:bg-brand-dark shadow-lift transition-transform hover:-translate-y-0.5"
           >
-            Quero saber mais
+            Quero meu catálogo
           </Button>
         </div>
 
@@ -83,10 +82,10 @@ export function SiteHeader() {
             ))}
             <Button
               size="lg"
-              render={<a href="#saber-mais" onClick={() => setOpen(false)} />}
+              render={<a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} />}
               className="mt-2 bg-brand font-semibold text-brand-foreground hover:bg-brand-dark"
             >
-              Quero saber mais
+              Quero meu catálogo
             </Button>
           </nav>
         </div>

@@ -23,10 +23,10 @@ export function Hero() {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button
               size="lg"
-              render={<a href="#saber-mais" />}
+              render={<a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" />}
               className="h-12 px-6 text-base bg-brand font-semibold text-brand-foreground hover:bg-brand-dark shadow-lift transition-transform hover:-translate-y-0.5"
             >
-              Quero saber mais
+              Quero meu catálogo
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Button>
             <Button
@@ -38,6 +38,11 @@ export function Hero() {
               Ver por segmento
             </Button>
           </div>
+
+          <p className="mt-4 text-xs font-semibold text-muted-foreground flex items-center gap-2">
+            <span className="inline-block h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+            Garantia incondicional de 7 dias · Reembolso 100% pela Kiwify
+          </p>
 
           <dl className="mt-10 grid max-w-md grid-cols-3 gap-6 border-t border-border/60 pt-6">
             {[

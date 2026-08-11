@@ -5,7 +5,7 @@ import { HowItWorks } from '@/components/landing/how-it-works'
 import { TechStack } from '@/components/landing/tech-stack'
 import { Problem } from '@/components/landing/problem'
 import { Comparison } from '@/components/landing/comparison'
-import { LeadForm } from '@/components/landing/lead-form'
+import { Offer } from '@/components/landing/offer'
 import { Faq } from '@/components/landing/faq'
 import { SiteFooter } from '@/components/landing/site-footer'
 
@@ -20,7 +20,7 @@ export default function Page() {
         <TechStack />
         <Problem />
         <Comparison />
-        <LeadForm />
+        <Offer />
         <Faq />
       </main>
       <SiteFooter />
