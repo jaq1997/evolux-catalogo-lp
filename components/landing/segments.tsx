@@ -88,33 +88,36 @@ export function Segments() {
           </p>
         </div>
 
-        <Tabs defaultValue="alimentacao" className="mt-12 gap-8">
-          <TabsList className="mx-auto grid h-auto w-full max-w-3xl grid-cols-2 gap-2 bg-transparent p-0 md:grid-cols-4">
+        <Tabs defaultValue="alimentacao" className="mt-10 sm:mt-14">
+          <TabsList className="mx-auto grid h-auto w-full max-w-3xl grid-cols-2 gap-2.5 bg-transparent p-0 sm:grid-cols-4 sm:gap-3">
             {SEGMENTS.map((seg) => {
               const Icon = seg.icon
               return (
                 <TabsTrigger
                   key={seg.value}
                   value={seg.value}
-                  className="flex h-auto flex-col items-center gap-1.5 rounded-xl border border-border bg-card px-3 py-3 text-xs font-semibold text-muted-foreground data-[state=active]:border-brand data-[state=active]:bg-brand-soft data-[state=active]:text-brand-dark"
+                  className="flex h-auto flex-col items-center justify-center gap-2 rounded-2xl border border-border/80 bg-card px-3 py-4 text-xs font-semibold text-muted-foreground transition-all hover:border-brand/40 hover:text-foreground data-[state=active]:border-brand data-[state=active]:bg-brand-soft data-[state=active]:text-brand-dark data-[state=active]:shadow-sm"
                 >
-                  <Icon className="h-5 w-5" aria-hidden="true" />
-                  <span className="text-center leading-tight">{seg.tab}</span>
+                  <Icon className="h-5 w-5 shrink-0" aria-hidden="true" />
+                  <span className="text-center leading-snug">{seg.tab}</span>
                 </TabsTrigger>
               )
             })}
           </TabsList>
 
           {SEGMENTS.map((seg) => (
-            <TabsContent key={seg.value} value={seg.value} className="mt-0">
-              <div className="grid items-center gap-10 rounded-2xl border border-border bg-card p-6 sm:p-10 lg:grid-cols-2">
-                <div>
-                  <h3 className="text-2xl font-extrabold tracking-tight text-foreground">{seg.title}</h3>
-                  <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">{seg.text}</p>
+            <TabsContent key={seg.value} value={seg.value} className="mt-8 sm:mt-10">
+              <div className="grid items-center gap-8 rounded-3xl border border-border bg-card p-6 sm:p-8 lg:grid-cols-2 lg:gap-12 lg:p-10 shadow-soft">
+                <div className="flex flex-col justify-center">
+                  <span className="inline-flex w-fit items-center rounded-full bg-brand-soft px-3 py-1 text-xs font-bold text-brand-dark mb-3">
+                    {seg.tab}
+                  </span>
+                  <h3 className="text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl">{seg.title}</h3>
+                  <p className="mt-4 text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">{seg.text}</p>
                   <ul className="mt-6 space-y-3">
                     {seg.bullets.map((b) => (
                       <li key={b} className="flex items-center gap-3 text-sm font-medium text-foreground">
-                        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-brand-soft text-brand">
+                        <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-soft text-brand">
                           <Check className="h-3.5 w-3.5" aria-hidden="true" />
                         </span>
                         {b}
@@ -122,7 +125,7 @@ export function Segments() {
                     ))}
                   </ul>
                 </div>
-                <div>
+                <div className="flex justify-center w-full pt-4 lg:pt-0">
                   <PhoneMockup mediaSrc={seg.mediaSrc} storeName={seg.store} categories={seg.categories} items={seg.items} />
                 </div>
               </div>

@@ -23,17 +23,34 @@ export function Hero() {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button
               size="lg"
-              render={<a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" />}
-              className="h-12 px-6 text-base bg-brand font-semibold text-brand-foreground hover:bg-brand-dark"
+              render={<a href="#saber-mais" />}
+              className="h-12 px-6 text-base bg-brand font-semibold text-brand-foreground hover:bg-brand-dark shadow-lift transition-transform hover:-translate-y-0.5"
             >
-              Quero meu catálogo
+              Quero saber mais
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              render={<a href="#para-quem-e" />}
+              className="h-12 px-6 text-base font-semibold"
+            >
+              Ver por segmento
             </Button>
           </div>
 
-          <p className="mt-5 text-sm font-medium text-muted-foreground">
-            Sem fidelidade · Sem taxa por pedido · Suporte humano
-          </p>
+          <dl className="mt-10 grid max-w-md grid-cols-3 gap-6 border-t border-border/60 pt-6">
+            {[
+              ['4', 'segmentos prontos'],
+              ['0', 'app para baixar'],
+              ['1', 'clique até o Zap'],
+            ].map(([num, label]) => (
+              <div key={label}>
+                <dt className="text-2xl font-black text-brand sm:text-3xl">{num}</dt>
+                <dd className="mt-1 text-xs font-medium text-muted-foreground">{label}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
 
         <div className="relative">

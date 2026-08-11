@@ -18,6 +18,7 @@ type PhoneMockupProps = {
 
 export function PhoneMockup({ storeName, categories, items, mediaSrc, alt, className }: PhoneMockupProps) {
   if (mediaSrc) {
+    const isVideo = mediaSrc.endsWith('.mp4') || mediaSrc.endsWith('.webm')
     return (
       <div
         className={cn(
@@ -26,11 +27,22 @@ export function PhoneMockup({ storeName, categories, items, mediaSrc, alt, class
         )}
       >
         <div className="relative overflow-hidden rounded-[1.75rem] bg-background aspect-[9/18.5] flex items-center justify-center">
-          <img
-            src={mediaSrc}
-            alt={alt || storeName || 'Demonstração do Catálogo'}
-            className="h-full w-full object-cover rounded-[1.75rem]"
-          />
+          {isVideo ? (
+            <video
+              src={mediaSrc}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="h-full w-full object-cover rounded-[1.75rem]"
+            />
+          ) : (
+            <img
+              src={mediaSrc}
+              alt={alt || storeName || 'Demonstração do Catálogo'}
+              className="h-full w-full object-cover rounded-[1.75rem]"
+            />
+          )}
         </div>
       </div>
     )

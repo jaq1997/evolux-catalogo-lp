@@ -1,9 +1,11 @@
 import { SiteHeader } from '@/components/landing/site-header'
 import { Hero } from '@/components/landing/hero'
 import { Segments } from '@/components/landing/segments'
+import { HowItWorks } from '@/components/landing/how-it-works'
+import { TechStack } from '@/components/landing/tech-stack'
 import { Problem } from '@/components/landing/problem'
 import { Comparison } from '@/components/landing/comparison'
-import { HowItWorks } from '@/components/landing/how-it-works'
+import { LeadForm } from '@/components/landing/lead-form'
 import { Faq } from '@/components/landing/faq'
 import { SiteFooter } from '@/components/landing/site-footer'
 
@@ -14,9 +16,11 @@ export default function Page() {
       <main>
         <Hero />
         <Segments />
+        <HowItWorks />
+        <TechStack />
         <Problem />
         <Comparison />
-        {/* <HowItWorks /> */}
+        <LeadForm />
         <Faq />
       </main>
       <SiteFooter />

@@ -50,10 +50,10 @@ export function SiteHeader() {
           <Button
             size="lg"
             nativeButton={false}
-            render={<a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" />}
-            className="bg-brand font-semibold text-brand-foreground hover:bg-brand-dark"
+            render={<a href="#saber-mais" />}
+            className="bg-brand font-semibold text-brand-foreground hover:bg-brand-dark shadow-lift transition-transform hover:-translate-y-0.5"
           >
-            Quero meu catálogo
+            Quero saber mais
           </Button>
         </div>
 
@@ -83,10 +83,10 @@ export function SiteHeader() {
             ))}
             <Button
               size="lg"
-              render={<a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" />}
+              render={<a href="#saber-mais" onClick={() => setOpen(false)} />}
               className="mt-2 bg-brand font-semibold text-brand-foreground hover:bg-brand-dark"
             >
-              Quero meu catálogo
+              Quero saber mais
             </Button>
           </nav>
         </div>
