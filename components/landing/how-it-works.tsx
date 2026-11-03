@@ -1,23 +1,29 @@
-import { MessageCircle, ShoppingBag, Smartphone } from 'lucide-react'
+import { CreditCard, Link, Palette, Upload } from 'lucide-react'
 
 const STEPS = [
   {
-    icon: Smartphone,
+    icon: CreditCard,
     step: '01',
-    title: 'Navega e escolhe',
-    description: 'Vitrine responsiva com categorias, fotos, variações e adicionais por item.',
+    title: '1. Garanta sua vaga na fila de montagem',
+    description: 'Faça o pagamento único de R$ 397,00 (em até 12x no cartão ou via Pix com aprovação imediata).',
   },
   {
-    icon: ShoppingBag,
+    icon: Upload,
     step: '02',
-    title: 'Monta o carrinho',
-    description: 'Quantidades, observações, frete por CEP ou retirada — tudo calculado na hora.',
+    title: '2. Envie os materiais da sua loja',
+    description: 'Logo após a compra, você responde ao nosso formulário simples enviando sua logo, categorias e fotos dos produtos.',
   },
   {
-    icon: MessageCircle,
+    icon: Palette,
     step: '03',
-    title: 'Finaliza no Zap',
-    description: 'O pedido chega formatado direto no seu WhatsApp, pronto para produção ou envio.',
+    title: '3. Nossa equipe monta tudo para você',
+    description: 'Criamos sua vitrine personalizada, organizamos o visual da loja e cadastramos seus produtos com variações de tamanho (P, M, G, GG) e cor.',
+  },
+  {
+    icon: Link,
+    step: '04',
+    title: '4. Receba seu link pronto para vender',
+    description: 'Em até 3 dias úteis, entregamos seu link exclusivo para você colocar na bio do Instagram e receber pedidos formatados direto no seu WhatsApp.',
   },
 ]
 
@@ -30,14 +36,11 @@ export function HowItWorks() {
             Simplicidade na conversão
           </span>
           <h2 className="mt-4 text-balance text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
-            Três passos até a venda
+            Como funciona o seu cadastro assistido em 4 passos
           </h2>
-          <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
-            Interface pública pensada para conversão: rápida, responsiva e clara em qualquer tela.
-          </p>
         </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {STEPS.map((item) => {
             const Icon = item.icon
             return (

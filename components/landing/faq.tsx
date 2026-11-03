@@ -7,24 +7,28 @@ import {
 
 const FAQS = [
   {
-    q: 'Preciso pagar mensalidade?',
-    a: 'Não. A Evolux Catálogo é pagamento único. Você não paga mensalidade recorrente nem comissão por pedido — a vitrine é sua e continua sua.',
+    q: 'O valor de R$ 397 tem alguma cobrança de mensalidade?',
+    a: 'Não! O pagamento de R$ 397 é único. Você paga uma vez e a vitrine é sua, sem taxa de manutenção ou comissão sobre suas vendas.',
   },
   {
-    q: 'Funciona para o meu tipo de negócio?',
-    a: 'Sim. A mesma tecnologia atende alimentação, serviços, turismo e varejo em geral. Seja um cardápio, uma lista de serviços com preços ou um catálogo de produtos com variações, tudo se adapta ao seu negócio.',
+    q: 'Não entendo de tecnologia, vou conseguir usar?',
+    a: 'Com certeza. Nossa equipe cadastra seus produtos iniciais e te entrega o link pronto em até 3 dias úteis após você enviar as fotos no formulário de onboarding.',
   },
   {
-    q: 'Como meus clientes fazem o pedido?',
-    a: 'O cliente navega pelo seu catálogo, escolhe os itens e envia o pedido já formatado direto no seu WhatsApp. Você recebe tudo organizado e fecha a venda conversando normalmente.',
+    q: 'Quanto tempo demora para o meu catálogo ficar pronto?',
+    a: 'Em até 3 dias úteis a contar do momento em que você preenche o formulário com a logo e as fotos da sua loja.',
   },
   {
-    q: 'Eu preciso saber programar para usar o painel?',
-    a: 'Não. O painel é tão simples quanto editar uma planilha: você adiciona um produto ou muda um preço e em segundos já está no ar. Sem código, sem complicação.',
+    q: 'Consigo alterar preços e cadastrar novos produtos depois?',
+    a: 'Sim! Você recebe acesso ao Painel do Lojista para alterar valores, atualizar fotos, ocultar peças esgotadas e adicionar novos produtos de forma simples.',
   },
   {
-    q: 'E se eu quiser um domínio próprio depois?',
-    a: 'Sem problema. Você pode começar com um subdomínio e conectar o seu próprio domínio quando quiser. A vitrine é sua e acompanha o crescimento do seu negócio.',
+    q: 'O meu cliente precisa baixar algum aplicativo?',
+    a: 'Não. O catálogo abre instantaneamente no navegador de qualquer celular (Android ou iPhone) com carregamento ultra rápido.',
+  },
+  {
+    q: 'Como funciona a garantia?',
+    a: 'Você tem 7 dias de garantia incondicional assegurada pela Kiwify. Se por qualquer motivo você achar que não é para o seu negócio, solicita o reembolso e recebe 100% do seu dinheiro de volta.',
   },
 ]
 

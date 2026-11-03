@@ -3,11 +3,12 @@ import { Button } from '@/components/ui/button'
 import { CHECKOUT_URL } from '@/lib/site'
 
 const INCLUDED = [
-  'Painel administrativo completo',
-  'Catálogo com seu domínio/subdomínio',
-  'Configuração e suporte na implantação',
-  'Sem mensalidade, sem taxa por pedido',
-  'Garantia incondicional de 7 dias Kiwify',
+  'Montagem assistida da vitrine entregue em até 3 dias úteis',
+  'Cadastro inicial das suas categorias e produtos',
+  'Suporte a variações de tamanho (P, M, G, GG e calçados)',
+  'Painel Administrativo do Lojista para alterar preços, ocultar itens e cadastrar novas peças quando quiser',
+  'Link exclusivo para a bio do Instagram e envio direto no WhatsApp',
+  'Acesso vitalício sem mensalidades nem taxas recorrentes',
 ]
 
 export function Offer() {
@@ -17,31 +18,22 @@ export function Offer() {
         <div className="overflow-hidden rounded-3xl bg-brand-dark text-brand-foreground shadow-lift">
           <div className="grid gap-8 p-8 sm:p-12 lg:grid-cols-2 lg:items-center">
             <div>
-              <span className="inline-flex items-center rounded-full bg-brand-foreground/15 px-3 py-1 text-xs font-semibold uppercase tracking-wide">
-                Oferta de Lançamento — Vagas Limitadas
-              </span>
+              <h2 className="text-3xl font-black leading-tight sm:text-4xl">
+                Sua loja pronta para vender mais nesta Black Friday
+              </h2>
 
               <div className="mt-6 flex items-end gap-3">
-                <span className="text-lg font-medium text-brand-foreground/60 line-through">R$ 1.497</span>
-                <span className="text-5xl font-black leading-none">R$ 597</span>
+                <span className="text-lg font-medium text-brand-foreground/60 line-through">R$ 1.000,00</span>
+                <span className="text-5xl font-black leading-none">R$ 397,00</span>
               </div>
-              <p className="mt-2 text-sm font-medium text-brand-foreground/80">Pagamento único · Sem mensalidade</p>
-
-              <div className="mt-4 flex flex-wrap items-center gap-3">
-                <span className="inline-flex items-center rounded-lg bg-brand-foreground px-3 py-1.5 text-sm font-bold text-brand-dark">
-                  Cupom SOBERANO
-                </span>
-                <span className="text-sm font-semibold text-brand-foreground/90">
-                  Implementação assistida inclusa nesta semana.
-                </span>
-              </div>
+              <p className="mt-2 text-sm font-medium text-brand-foreground/80">À vista no Pix ou em até 12x no cartão</p>
 
               <Button
                 size="lg"
                 render={<a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" />}
                 className="mt-8 h-12 w-full px-6 text-base bg-brand-foreground font-extrabold text-brand-dark hover:bg-brand-soft sm:w-auto shadow-lift transition-transform hover:-translate-y-0.5"
               >
-                Garantir meu catálogo agora
+                [ GARANTIR MINHA VITRINE COM R$ 603 DE DESCONTO ]
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Button>
             </div>
@@ -69,9 +61,9 @@ export function Offer() {
                   <ShieldCheck className="h-6 w-6" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-brand-foreground">Risco Zero: Garantia de 7 Dias Kiwify</h4>
+                  <h4 className="text-sm font-bold text-brand-foreground">Garantia Incondicional de 7 Dias</h4>
                   <p className="mt-1 text-xs leading-relaxed text-brand-foreground/80">
-                    Teste o catálogo à vontade no seu negócio. Se por qualquer motivo não gostar, solicite 100% do seu dinheiro de volta pela Kiwify em até 7 dias, sem burocracia.
+                    Teste à vontade. Se por qualquer motivo não gostar, solicite 100% do seu dinheiro de volta direto pela Kiwify.
                   </p>
                 </div>
               </div>

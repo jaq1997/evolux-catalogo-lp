@@ -1,6 +1,5 @@
 import { SiteHeader } from '@/components/landing/site-header'
 import { Hero } from '@/components/landing/hero'
-import { Segments } from '@/components/landing/segments'
 import { HowItWorks } from '@/components/landing/how-it-works'
 import { TechStack } from '@/components/landing/tech-stack'
 import { Problem } from '@/components/landing/problem'
@@ -15,7 +14,6 @@ export default function Page() {
       <SiteHeader />
       <main>
         <Hero />
-        <Segments />
         <HowItWorks />
         <TechStack />
         <Problem />

@@ -10,52 +10,40 @@ export function Hero() {
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 pb-16 sm:px-6 lg:grid-cols-2 lg:gap-8 lg:pb-24">
         <div>
           <span className="inline-flex items-center rounded-full bg-brand-soft px-3 py-1 text-xs font-semibold text-brand-dark">
-            Vitrine digital para qualquer negócio
+            OFERTA DE PRÉ-BLACK FRIDAY — VAGAS LIMITADAS DE MONTAGEM
           </span>
           <h1 className="mt-5 text-balance text-4xl font-black leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-            Sua vitrine digital, <span className="italic text-brand">sua regra.</span>
+            Sua Vitrine Digital Pronta em Até 3 Dias Úteis. Sem Mensalidades.
           </h1>
           <p className="mt-5 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
-            Catálogo online com sua marca, seu domínio e seu controle — sem mensalidade, sem
-            comissão por venda, sem depender de plataforma de terceiro.
+            Chega de perder tempo enviando fotos soltas e preços no WhatsApp. Nossa equipe entrega seu catálogo profissional pronto com fotos, categorias e tamanhos (P, M, G, GG) para você receber pedidos organizados em 1 clique.
           </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-8">
+            <span className="text-lg font-black text-brand sm:text-xl">
+              12x de R$ 41,06
+            </span>
+            <p className="mt-1 text-sm font-semibold text-muted-foreground">
+              Sem juros
+            </p>
+          </div>
+
+          <div className="mt-6">
             <Button
               size="lg"
               render={<a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" />}
               className="h-12 px-6 text-base bg-brand font-semibold text-brand-foreground hover:bg-brand-dark shadow-lift transition-transform hover:-translate-y-0.5"
             >
-              Quero meu catálogo
+              QUERO MINHA VITRINE PRONTA POR 12X DE R$ 41,06
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              render={<a href="#para-quem-e" />}
-              className="h-12 px-6 text-base font-semibold"
-            >
-              Ver por segmento
             </Button>
           </div>
 
           <p className="mt-4 text-xs font-semibold text-muted-foreground flex items-center gap-2">
             <span className="inline-block h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-            Garantia incondicional de 7 dias · Reembolso 100% pela Kiwify
+            Garantia incondicional de 7 dias · Reembolso 100% garantido pela Kiwify
           </p>
 
-          <dl className="mt-10 grid max-w-md grid-cols-3 gap-6 border-t border-border/60 pt-6">
-            {[
-              ['4', 'segmentos prontos'],
-              ['0', 'app para baixar'],
-              ['1', 'clique até o Zap'],
-            ].map(([num, label]) => (
-              <div key={label}>
-                <dt className="text-2xl font-black text-brand sm:text-3xl">{num}</dt>
-                <dd className="mt-1 text-xs font-medium text-muted-foreground">{label}</dd>
-              </div>
-            ))}
-          </dl>
         </div>
 
         <div className="relative">
