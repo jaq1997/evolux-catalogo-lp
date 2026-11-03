@@ -94,87 +94,206 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
-.dark {
-  color-scheme: dark;
-  --background: oklch(0.129 0.042 264.695);
-  --foreground: oklch(0.984 0.003 247.858);
-  --card: oklch(0.208 0.042 265.755);
-  --card-foreground: oklch(0.984 0.003 247.858);
-  --popover: oklch(0.208 0.042 265.755);
-  --popover-foreground: oklch(0.984 0.003 247.858);
-  --primary: oklch(0.62 0.19 256);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.279 0.041 260.031);
-  --secondary-foreground: oklch(0.984 0.003 247.858);
-  --muted: oklch(0.279 0.041 260.031);
-  --muted-foreground: oklch(0.704 0.04 256.788);
-  --accent: oklch(0.279 0.041 260.031);
-  --accent-foreground: oklch(0.984 0.003 247.858);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.551 0.027 264.364);
-  --brand: oklch(0.62 0.19 256);
-  --brand-dark: oklch(0.52 0.20 256);
-  --brand-soft: oklch(0.279 0.041 260.031);
-  --brand-foreground: oklch(0.984 0.003 247.858);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.208 0.042 265.755);
-  --sidebar-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.279 0.041 260.031);
-  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.551 0.027 264.364);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not(.light) {
-    color-scheme: dark;
-    --background: oklch(0.145 0 0);
-    --foreground: oklch(0.985 0 0);
-    --card: oklch(0.205 0 0);
-    --card-foreground: oklch(0.985 0 0);
-    --popover: oklch(0.205 0 0);
-    --popover-foreground: oklch(0.985 0 0);
-    --primary: oklch(0.922 0 0);
-    --primary-foreground: oklch(0.205 0 0);
-    --secondary: oklch(0.269 0 0);
-    --secondary-foreground: oklch(0.985 0 0);
-    --muted: oklch(0.269 0 0);
-    --muted-foreground: oklch(0.708 0 0);
-    --accent: oklch(0.269 0 0);
-    --accent-foreground: oklch(0.985 0 0);
-    --destructive: oklch(0.704 0.191 22.216);
-    --border: oklch(1 0 0 / 10%);
-    --input: oklch(1 0 0 / 15%);
-    --ring: oklch(0.556 0 0);
-    --chart-1: oklch(0.87 0 0);
-    --chart-2: oklch(0.556 0 0);
-    --chart-3: oklch(0.439 0 0);
-    --chart-4: oklch(0.371 0 0);
-    --chart-5: oklch(0.269 0 0);
-    --sidebar: oklch(0.205 0 0);
-    --sidebar-foreground: oklch(0.985 0 0);
-    --sidebar-primary: oklch(0.488 0.243 264.376);
-    --sidebar-primary-foreground: oklch(0.985 0 0);
-    --sidebar-accent: oklch(0.269 0 0);
-    --sidebar-accent-foreground: oklch(0.985 0 0);
-    --sidebar-border: oklch(1 0 0 / 10%);
-    --sidebar-ring: oklch(0.556 0 0);
-  }
-}
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* ===== Black Friday theme ===== */
+html.blackfriday,
+html.blackfriday .dark,
+html.blackfriday:root {
+  color-scheme: dark;
+  --background: oklch(0.13 0.005 60);
+  --foreground: oklch(0.97 0.01 90);
+  --card: oklch(0.18 0.008 60);
+  --card-foreground: oklch(0.97 0.01 90);
+  --popover: oklch(0.18 0.008 60);
+  --popover-foreground: oklch(0.97 0.01 90);
+  --primary: oklch(0.82 0.17 75);
+  --primary-foreground: oklch(0.15 0.01 60);
+  --secondary: oklch(0.17 0.008 60);
+  --secondary-foreground: oklch(0.97 0.01 90);
+  --muted: oklch(0.22 0.01 60);
+  --muted-foreground: oklch(0.72 0.02 80);
+  --accent: oklch(0.25 0.03 70);
+  --accent-foreground: oklch(0.97 0.01 90);
+  --border: oklch(1 0 0 / 0.1);
+  --input: oklch(1 0 0 / 0.15);
+  --ring: oklch(0.82 0.17 75);
+  --brand: oklch(0.82 0.17 75);
+  --brand-dark: oklch(0.88 0.15 85);
+  --brand-soft: oklch(0.26 0.06 70);
+  --brand-foreground: oklch(0.15 0.01 60);
+  --bf-hot: oklch(0.62 0.23 30);
+  --gradient-primary: linear-gradient(135deg, oklch(0.85 0.16 85), oklch(0.68 0.2 45));
+  --shadow-lift: 0 24px 60px -20px oklch(0.75 0.18 60 / 0.45);
+}
+
+html.blackfriday .bg-brand {
+  background-image: var(--gradient-primary);
+}
+
+html.blackfriday #top {
+  background: radial-gradient(60% 50% at 80% 30%, oklch(0.7 0.19 55 / 0.22), transparent 70%);
+}
+
+.bf-bar {
+  background: var(--bf-hot);
+  color: oklch(0.98 0 0);
+}
+
+.bf-digit {
+  background: oklch(0 0 0 / 0.35);
+  border-radius: 0.375rem;
+  padding: 0 0.4rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.bf-tag {
+  background: var(--foreground);
+  color: var(--background);
+}
+
+.bf-price-old {
+  color: var(--muted-foreground);
+  text-decoration: line-through;
+}
+
+.bf-glow {
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
+  animation: bf-button-pulse 1.8s ease-in-out infinite;
+}
+
+.bf-glow::before {
+  position: absolute;
+  z-index: -1;
+  inset: -0.3rem;
+  border-radius: inherit;
+  background: oklch(0.82 0.17 75 / 0.32);
+  content: "";
+  animation: bf-button-glow 1.8s ease-out infinite;
+}
+
+@keyframes bf-button-pulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.018);
+    filter: brightness(1.12);
+  }
+}
+
+@keyframes bf-button-glow {
+  70% {
+    opacity: 0;
+    transform: scale(1.16);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+#top > div:last-of-type a.bf-glow,
+#oferta a.bf-glow {
+  white-space: normal;
+  text-align: center;
+}
+
+#top a.bf-glow {
+  width: 100%;
+}
+
+#oferta a.bf-glow {
+  position: relative;
+  z-index: 2;
+  height: auto;
+  min-height: 3rem;
+  margin-top: 1.25rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  line-height: 1.25;
+  border-color: transparent;
+  background-color: oklch(0.18 0.008 60);
+  color: oklch(0.97 0.01 90);
+}
+
+#oferta a.bf-glow:hover {
+  background-color: oklch(0.24 0.01 60);
+  color: oklch(0.97 0.01 90);
+}
+
+@media (min-width: 640px) {
+  #top a.bf-glow {
+    width: auto;
+  }
+}
+
+.comparison-table th,
+.comparison-table td {
+  overflow-wrap: anywhere;
+}
+
+#oferta {
+  overflow: hidden;
+}
+
+#oferta > div {
+  width: 100%;
+}
+
+#oferta .grid > div:first-child {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 639px) {
+  main .px-4 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  #top > div:last-of-type,
+  #oferta > div {
+    max-width: 100%;
+  }
+
+  .comparison-table th:nth-child(3),
+  .comparison-table td:nth-child(3) {
+    display: none;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  #oferta > div > div {
+    border-radius: 1.25rem;
+  }
+
+  #oferta .grid {
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bf-glow {
+    animation: none;
+  }
+
+  .bf-glow::before {
+    animation: none;
   }
 }
